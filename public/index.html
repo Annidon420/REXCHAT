@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Chat App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Header -->
+    <header class="chat-header">
+      <h1>Advanced Chat App</h1>
+      <div id="onlineUsers" class="online-users"></div>
+    </header>
+
+    <!-- Messages -->
+    <main id="messages" class="chat-messages"></main>
+
+    <!-- Typing Indicator -->
+    <div id="typingIndicator" class="typing-indicator" style="display: none;">
+      Someone is typing...
+    </div>
+
+    <!-- Reply Section -->
+    <div id="replyContainer" class="reply-container" style="display: none;">
+      <p>Replying to: <span id="replyTo"></span></p>
+      <button id="cancelReply">Cancel</button>
+    </div>
+
+    <!-- Input Section -->
+    <div class="message-input">
+      <input id="messageInput" type="text" placeholder="Type a message..." autocomplete="off">
+      <input id="fileInput" type="file" style="display: none;">
+      <button id="fileButton">📎</button>
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
